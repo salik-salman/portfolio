@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@font-face {
+    font-family: "Elianto";
+    src: url("./Elianto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Ikaros-light";
+    src: url("./Ikaros\ Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "Ikaros";
+    src: url("./Ikaros\ Regular.otf.otf") format("opentype");
+}
+body {
+    margin: 0;
+}
+.cs{
+    text-align:center;
+    justify-content:center;
+    margin:auto;
+}
+.ir{
+    width: 100%;
+}
+.ic-anm{
+    -webkit-animation: ia linear 0.25s 1 normal forwards;
+    animation: ia linear 0.25s 1 normal forwards;
+      transition: all 0.25s ease-in-out;
+}
+.ic-anm-rm {
+    -webkit-animation: iar linear 0.25s 1 normal forwards;
+    animation: iar linear 0.25s 1 normal forwards;
+    transition: all 0.3s ease-in-out;
+}
+.nd{
+    font-family: 'Neonderthaw',cursive;
+    font-weight: 400;
+}
+.et{
+        font-family: "Elianto",cursive;
+        font-weight: 500;
+}
+.ik {
+    font-family: "Ikaros", cursive;
+    font-weight: 500;
+}
+.ikl {
+    font-family: "Ikaros-light",cursive;
+    font-weight: 500;
+}
+.hed{
+    color: #FFF;
+    font-size: 60px;
+    letter-spacing: 1vh;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.heds {
+    color: #FFF;
+    font-size: 2.5vh;
+    letter-spacing: 0.5vh;
+    margin-top: 0;
+}
+.nm{
+    color: #FFF;
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.ic{
+    cursor: pointer;
+    margin: 50px;
+    margin-bottom:0px !important;
+    border-radius: 50%;
+    width: 250px;
+    height: auto;
+    border:3px solid #FFF;
+    transition: all 200ms ease-in-out;
+}
+.ic:hover {
+    filter: drop-shadow(8px 8px 10px gray);
+}
+.br{
+    filter: blur(2px);
+}
+#particles-js canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.hr{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    display: flex;
+    /* min-height: 100vh; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    /* background: linear-gradient(to right, #6a89fb, purple); */
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 8s ease infinite;
+}
