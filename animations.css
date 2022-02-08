@@ -65,3 +65,25 @@ canvas {
     height: 100%;
     z-index:-1;
 }
+
+/*
+* ANIMATION TYPE: Scroll Down Button Animation
+* BY: SALIK SALMAN
+* ON: 07-02-2022
+*/
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
