@@ -13,7 +13,7 @@
 var
     ws = $(window).height(),
     hs = $('.hr'),
-    ic = $('.ic'),
+    ic = $('.scroll-down'),
     ic_a = "ic-anm",
     ic_ar = "ic-anm-rm",
     dm = $(document)
@@ -49,18 +49,13 @@ const f = () => {
 }
 
 ic.click(function(){
-    if (ic.hasClass(ic_a)){
+  /*  if (ic.hasClass(ic_a)){
        t()
     }else{
        f()
-    }
+    }*/
+	      $.fn.fullpage.moveTo(parseInt(this.id)+1);
 })
-
-$('#workspace').on('scroll resize', function () {}).one('scroll resize', function () {
-    if (Math.abs(100 - $(this).scrollTop()) < 20) {
-        f()
-    }
-});
 
 /**************** HERO IMAGE ANIMATION END ****************/
 
@@ -72,7 +67,7 @@ particlesJS("particles-js", {
             "value": 100,
             "density": {
                 "enable": true,
-                "value_area": 400
+                "value_area": 800
             }
         },
         "color": {
@@ -178,3 +173,35 @@ particlesJS("particles-js", {
 });
 
 /**************** HERO BACKGROUND ANIMATION END ****************/
+
+/**************** FULLPAGE SCROLL JS STARTS ****************/
+
+/*$('.nav-link').click(function(){
+    var sectionIndex = $(this).attr('data-section');
+    var slideIndex = $(this).attr('data-slide') || 0;
+    fullpage_api.moveTo(sectionIndex, slideIndex);
+});*/
+
+addEventListener("DOMContentLoaded", function() {
+    $('#fullpage').fullpage({
+    
+    		slidesNavigation: true,
+        navigation: true,
+	  	keyboardScrolling: true,
+      	animateAnchor: true,
+      	scrollHorizontally: true,
+      	css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+
+      	//Design
+      	animateAnchor: true,
+      	controlArrows: false,
+      	responsiveSlides: true,
+        
+        });
+      
+});
+
+/**************** FULLPAGE SCROLL JS END ****************/
+
