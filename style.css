@@ -97,14 +97,28 @@ body {
     justify-content: center;
     margin:0;
     display: flex;
-    /* min-height: 100vh; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 	z-index: 2 !important;
     width: 100%;
-    /* background: linear-gradient(to right, #6a89fb, purple); */
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 8s ease infinite;
+}
+.hr_al{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+	z-index: 2 !important;
+    width: 100%;
     background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
     background-size: 400% 400%;
     animation: Gradient 8s ease infinite;
@@ -136,25 +150,10 @@ body {
 .scroll-down::before {
   top: 30%;
   animation-delay: 0.3s;
-  /* animation: scroll-down 1s ease-in-out infinite; */
 }
 .fp-tableCell {
 display: block;
 }
-/*.fullpage-wrapper {
-	width: 100%!important;
-	transform: none!important;
-}
-
-.fp-section {
-	width: 100%!important;
-	position: absolute;
-	left: 0;
-	top: 0;
-	visibility: hidden;
-	opacity: 0;
-	transition: all .3s ease-in-out;
-}*/
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   width: 16px;
@@ -195,31 +194,168 @@ display: block;
 .fp-slidesNav ul li:hover a.active span::after {
   height: 100%;
 }
-/*
-.fp-section.active {
-	visibility: visible;
-	opacity: 1;
-}
+body {
+    margin: 0;
+    padding: 0;
+  }
   
-  fp-slidesContainer {
-	width: 100%!important;
-	transform: none!important;
+  .container {
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+    height: 100vh;
+    padding: 50px;
+  }
+  .container div {
+    flex: 1;
+    /* height: 100vh; */
+    margin: auto;
+    transition: flex 0.5s ease-out;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .container div h1 {
+    transition: color 0.5s ease-out;
+  }
+  /* .container div:hover {
+    flex: 1.5;
+  } */
+  /* .container .left {
+    background: #ff4c5b;
+  } */
+  /* .container .left:hover h1 {
+    color: #47bbff;
+  } */
+  /* .container .right {
+    background: #47bbff;
+  } */
+  /* .container .right:hover h1 {
+    color: #ff4c5b;
+  } */
+  .card {
+    width: auto;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .cn{
+      background: #1d1e22 !important;
+  }
+  h1:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    margin: auto;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 4px solid #FC415A;
 }
-
-.fp-slide {
-	width: 100%!important;
-	position: absolute;
-	left: 0;
-	top: 0;
-	visibility: hidden;
-	opacity: 0;
-	transition: all .5s ease-in-out;
-  animation-iteration-count: infinite;
+h1.section-title::after {
+    content: '';
+    margin: auto;
+    display: block;
+    width: 8%;
+    height: 4px;
+    background: #FC415A;
+    bottom: 0;
+    left: 0;
 }
-
-.fp-slide.active {
-	visibility: visible;
-	opacity: 1;
-}
-
-};
+  .sk{
+    -webkit-animation-fill-mode: backwards !important;
+     animation-fill-mode: backwards !important;
+      margin-right: 10px;
+  }
+  .card .container {
+    width: auto;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid #ecf0fc;
+  }
+  
+  .container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  .container small {
+    color: #120c35;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  
+  
+  @media screen and (max-width: 425px) {
+    .card {
+      width: auto;
+    }
+  
+    .container img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .container h2 {
+      font-size: 20px;
+    }
+  
+    .container small {
+      font-size: 14px;
+    }
+  
+  }
+  .about{
+      padding: 10px;
+      height:50%;
+  }
+  .about *{
+      color: #000;
+      margin: 5px;
+  }
+#skills {
+	list-style-type: none;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 960px;
+  }
+  #skills li {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 6px;
+  }
+  #skills li .bar-container,
+  #skills li .bar {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    content: "";
+  }
+  #skills li .bar-container {
+    bottom: -8px;
+    width: 100%;
+    background-color: #333;
+    text-align: right;
+  }
+  #skills li .bar-container .bar {
+    top: 0;
+  }
+  #skills li .bar-container .pct {
+    position: absolute;
+    top: -19px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }

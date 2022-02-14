@@ -9,9 +9,7 @@
  */
 
 /**************** GLOBAL PARAMS STARTS ****************/
-
-var
-    ws = $(window).height(),
+var ws = $(window).height(),
     hs = $('.hr'),
     ic = $('.scroll-down'),
     ic_a = "ic-anm",
@@ -198,6 +196,11 @@ addEventListener("DOMContentLoaded", function() {
       	animateAnchor: true,
       	controlArrows: false,
       	responsiveSlides: true,
+          onLeave: function(index, nextIndex, direction) {
+            if(index = 1){
+                about();
+            }
+        }
         
         });
       
@@ -205,3 +208,63 @@ addEventListener("DOMContentLoaded", function() {
 
 /**************** FULLPAGE SCROLL JS END ****************/
 
+/**************** SKILLS PROGRESS BARS START ****************/
+
+function pg (){
+	
+	var $bars = $( ".bar" ),
+		methods = {
+			init: function() {
+				
+				// Bind events
+				methods.bindEvents();
+				
+			},
+			bindEvents: function() {
+
+				// Loop through each of the bars...
+				$bars.each( function() {
+
+					var $bar = $( this ),
+						$pct = $bar.find( ".pct" ),
+						data = $bar.data( "bar" );
+
+					setTimeout( function() {
+
+						$bar
+							.css( "background-color", data.color )
+							.animate({
+								"width": $pct.html()
+							}, data.speed || 1000, function() {
+
+								$pct.css({
+									"color": data.color,
+									"opacity": 1
+								});
+
+							});
+
+					}, data.delay || 0 );			
+
+				});
+
+			}
+		};
+	
+	// Initialize on page load
+	methods.init();	
+		
+    };
+
+/**************** SKILLS PROGRESS BARS START ****************/
+
+/**************** SECTION ABOUT ANIMATION STARTS ****************/
+
+function about() {
+    pg();
+    $(".second *").addClass("animate__animated");
+    $(".sk").addClass("animate__jackInTheBox")
+    $(".sk").css('--animate-duration', '1.8s')
+}
+
+/**************** SECTION ABOUT ANIMATION STARTS ****************/
